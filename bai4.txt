@@ -1,0 +1,12 @@
+syms t1 t2 l1 l2 l3 l4 l5 STEP
+l1=20; l2=30; l3=40; l4=50;l5=60
+STEP=0.1;
+for t1=0:STEP:pi/2;
+    for t2=0:STEP:pi/2;
+            Px= cos(t1)*(l2 + l4*cos(t2) + l5*sin(t2));
+            Py= sin(t1)*(l2 + l4*cos(t2) + l5*sin(t2));
+            Pz= l1 - l5*cos(t2) + l4*sin(t2);
+            plot3(Px,Py,Pz,'*');
+            hold on
+    end
+end
